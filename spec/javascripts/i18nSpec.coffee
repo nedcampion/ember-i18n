@@ -4,6 +4,7 @@ describe 'Em.I18n', ->
 
   render = (template, options = {}) ->
     options.template = Em.Handlebars.compile(template)
+    options.TestNamespace = window.TestNamespace;
     view = Em.View.create(options)
     Em.run ->
       view.append()
